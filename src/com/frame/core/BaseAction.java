@@ -9,7 +9,6 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts2.ServletActionContext;
-import com.gener.core.web.paging.PageNavigator;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class BaseAction extends ActionSupport {
@@ -115,8 +114,6 @@ public class BaseAction extends ActionSupport {
 	this.person_id = person_id;
     }
 
-    protected PageNavigator webPage = new PageNavigator();
-
     protected String url = "";
 
     protected String page = "";
@@ -198,8 +195,6 @@ public class BaseAction extends ActionSupport {
 	}
 
     }
-
-
 
     // ---------------------------Methods------------------------------
     public String getSuccessResult() {
@@ -327,14 +322,6 @@ public class BaseAction extends ActionSupport {
 	return getRequest().getScheme() + "://" + getRequest().getServerName()
 		+ ":" + getRequest().getServerPort()
 		+ getRequest().getContextPath() + "/";
-    }
-
-    public PageNavigator getWebPage() {
-	return webPage;
-    }
-
-    public void setWebPage(PageNavigator webPage) {
-	this.webPage = webPage;
     }
 
     public Map<String, Object> getDataMap() {
