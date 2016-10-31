@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>aaa</title>
+<title>500</title>
 </head>
 <body>
-	<h1>indes pages</h1>
+
 </body>
 </html>

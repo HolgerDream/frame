@@ -24,32 +24,13 @@
 		<action name="*_*" class="{1}" method="{2}">
 			<result name="jsp">${page}</result>
 			<result name="url" type="redirect">${url}</result>
-			<result name="ajax" type="json">
-				<param name="contentType">application/json</param>
-				<param name="root">result</param>
-				<param name="excludeNullProperties">true</param>
-			</result>
-			<result name="nulljson" type="json">
-				<param name="contentType">application/json</param>
-				<param name="root">NULL</param>
-				<param name="excludeNullProperties">true</param>
-			</result>
 			<result name="json" type="json">
 				<param name="contentType">application/json</param>
 				<param name="root">dataMap</param>
 				<param name="excludeNullProperties">true</param>
 			</result>
-			<result name="download" type="stream">
-				<param name="contentType">application/octet-stream;charset=UTF-8</param>
-				<param name="inputName">inputStream</param>
-				<param name="contentDisposition">attachment;filename="${fileName}"</param>
-				<param name="bufferSize">4096</param>
-			</result>
-			<result name="nofile">pages/fileNotExist.jsp</result>
-			<result name="login">pages/mdm_login.jsp</result>
-			<result name="error">pages/error.jsp</result>
-			<result name="noLogin">pages/mdm_noLogin.jsp</result>
-			<result name="errorSession">pages/errorSession.jsp</result>
+			<result name="404">pages/404.jsp</result>
+			<result name="500">pages/500.jsp</result>
 		</action>
 
 	</package>

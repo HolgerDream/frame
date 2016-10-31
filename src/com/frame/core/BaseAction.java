@@ -23,33 +23,11 @@ public class BaseAction extends ActionSupport {
 
     public static final String JSON = "json";
 
-    public static final String NULLJSON = "nulljson";
-
-    public static final String NOLogin = "noLogin";
-
-    public static final String Login = "login";
-
-    public static final String Error = "error";
-
+    public static final String E404 = "404";
+    
+    public static final String E500 = "500";
+    
     public static final String SUCCESS = "success";
-
-    public static final String FAILURE = "failure";
-
-    public static final String NOFILE = "nofile";
-
-    public static final String DOWNLOAD = "download";
-
-    public static final String PAGE_AJAX = "pages/ajax.jsp";
-
-    public static final String PAGE_RESULT_ALERT = "pages/resultAlert.jsp";
-
-    public static final String PAGE_RESULT_MESSAGE = "pages/resultMessage.jsp";
-
-    public static final String PAGE_NO_FILE = "pages/fileNotExist.jsp";
-
-    public String successResult = "/index.jsp";
-
-    public static final String SHAREURI = "indexAction_sharePage.action,reportManage_viewShare.action,reportManage_fileShare.action";
 
     /** session 人员 KEY */
     public static final String SESSION_PERSON = "SESSION_PERSON";
@@ -173,37 +151,8 @@ public class BaseAction extends ActionSupport {
 	return userName;
     }
 
-    /**
-     * 
-     * 描述：TODO
-     * 
-     * @param success
-     *            如果success 未failure，客户端会弹出对应error字段的信息
-     *            如果error为空，不要将success置为failure
-     * @param error
-     *            错误时显示的错误信息
-     * @param data
-     */
-    protected void setResult(String success, String error,
-	    Map<String, Object> data) {
-	if (SUCCESS.equals(success)) {
-	    this.getDataMap().put(MSG, SUCCESS);
-	    this.getDataMap().put(DATA, data);
-	} else {
-	    this.getDataMap().put(MSG, FAILURE);
-	    this.getDataMap().put(errMsg, error);
-	}
-
-    }
 
     // ---------------------------Methods------------------------------
-    public String getSuccessResult() {
-	return successResult;
-    }
-
-    public void setSuccessResult(String successResult) {
-	this.successResult = successResult;
-    }
 
     public String list() {
 	return SUCCESS;
