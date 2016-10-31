@@ -11,5 +11,5 @@
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd"  default-lazy-init="false">
 	
-   <import resource="app-service.xml"/>
+   <import resource="action.xml"/>
 </beans>
